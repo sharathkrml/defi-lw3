@@ -92,7 +92,7 @@ contract Exchange is ERC20 {
         // y = outputReserve
         uint256 inputAfterFee = inputAmount * 99;
         uint256 numerator = inputAfterFee * outputReserve;
-        uint256 denominator = (inputReserve * 100) + inputAmountWithFee;
+        uint256 denominator = (inputReserve * 100) + inputAfterFee;
         return numerator / denominator;
     }
 
